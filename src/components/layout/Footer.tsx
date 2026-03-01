@@ -42,9 +42,9 @@ const Footer: React.FC = () => {
                         <ul className="space-y-3">
                             {[
                                 { name: 'الرئيسية', href: '#home' },
+                                { name: 'من نحن', href: '#founder' },
                                 { name: 'المنتجات', href: '#products' },
-                                { name: 'لماذا نحن', href: '#why-us' },
-                                { name: 'مراحل الإنتاج', href: '#production' },
+                                { name: 'مزرعتنا', href: '#farm' },
                                 { name: 'تواصل معنا', href: '#contact' },
                             ].map((link) => (
                                 <li key={link.name}>

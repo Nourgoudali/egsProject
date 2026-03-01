@@ -1,7 +1,7 @@
 export const contactInfo = {
-    address: "Benguérir, N9, Ben Guerir, Maroc",
+    address: "3372+GQR, Ouled Moussa",
     postalCode: "43150",
-    email: "ayyouboubbad1@gmail.com",
+    email: "goudalinour2@gmail.com",
     hours: "24/24 7j",
     phones: [
         { name: "Ali-Commercial", number: "212 661-099114" },

@@ -24,9 +24,9 @@ const Header: React.FC = () => {
 
     const navLinks = [
         { name: 'الرئيسية', href: '#home' },
+        { name: 'من نحن', href: '#founder' },
         { name: 'المنتجات', href: '#products' },
-        { name: 'لماذا نحن', href: '#why-us' },
-        { name: 'مراحل الإنتاج', href: '#production' },
+        { name: 'مزرعتنا', href: '#farm' },
         { name: 'تواصل معنا', href: '#contact' },
     ];
 
@@ -44,8 +44,8 @@ const Header: React.FC = () => {
         <header
             id="navbar"
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-                    ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-gray-900/5 py-2'
-                    : 'bg-transparent py-4'
+                ? 'bg-white/95 backdrop-blur-xl shadow-lg shadow-gray-900/5 py-2'
+                : 'bg-transparent py-4'
                 }`}
         >
             <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
@@ -99,8 +99,8 @@ const Header: React.FC = () => {
                     <a
                         href="tel:+212661099114"
                         className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 ${isScrolled
-                                ? 'bg-brand-500 text-white hover:bg-brand-600 shadow-md shadow-brand-500/20'
-                                : 'bg-white/15 text-white hover:bg-white/25 backdrop-blur-md border border-white/20'
+                            ? 'bg-brand-500 text-white hover:bg-brand-600 shadow-md shadow-brand-500/20'
+                            : 'bg-white/15 text-white hover:bg-white/25 backdrop-blur-md border border-white/20'
                             }`}
                     >
                         <Phone size={16} />
@@ -112,8 +112,8 @@ const Header: React.FC = () => {
                 <button
                     id="mobile-menu-toggle"
                     className={`lg:hidden p-2.5 rounded-xl transition-all ${isScrolled
-                            ? 'text-gray-900 hover:bg-gray-100'
-                            : 'text-white hover:bg-white/15'
+                        ? 'text-gray-900 hover:bg-gray-100'
+                        : 'text-white hover:bg-white/15'
                         }`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     aria-label="Toggle menu"

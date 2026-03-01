@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { contactInfo } from '../../data/contacts';
-import { MapPin, Mail, Send, CheckCircle2, AlertCircle, Phone, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Send, CheckCircle2, AlertCircle, MessageCircle } from 'lucide-react';
 import { generateEmailTemplate } from '../../utils/emailTemplate';
 import { useScrollReveal } from '../../utils/useScrollReveal';
 
@@ -82,25 +82,16 @@ const Contact: React.FC = () => {
                 <div className="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto">
                     {/* Contact Info Side */}
                     <div className="lg:w-5/12 flex flex-col gap-6 fade-in-up">
-                        {/* Phone Numbers Card */}
-                        <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white p-8 rounded-3xl shadow-2xl relative overflow-hidden">
-                            <div className="absolute -left-10 -top-10 w-40 h-40 bg-brand-500/10 rounded-full blur-2xl"></div>
-                            <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-brand-500/10 rounded-full blur-2xl"></div>
-
-                            <h3 className="text-xl font-bold mb-6 flex items-center gap-3 relative z-10">
-                                <div className="w-10 h-10 rounded-xl bg-brand-500/20 flex items-center justify-center">
-                                    <Phone size={20} className="text-brand-400" />
-                                </div>
-                                أرقام الهواتف
-                            </h3>
-                            <ul className="space-y-4 relative z-10">
-                                {contactInfo.phones.map((phone, idx) => (
-                                    <li key={idx} className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-gray-700/50 pb-3 last:border-0 last:pb-0 gap-1">
-                                        <span className="font-semibold text-gray-400 text-sm">{phone.name}</span>
-                                        <a href={`tel:${phone.number.replace(/\s+/g, '')}`} className="font-black text-lg hover:text-brand-400 transition-colors" dir="ltr">{phone.number}</a>
-                                    </li>
-                                ))}
-                            </ul>
+                        {/* Map Card */}
+                        <div className="bg-white p-2 rounded-3xl shadow-sm border border-gray-100 h-64 overflow-hidden relative group">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Ste%20%C5%92ufs%20Rhamna&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                                className="w-full h-full rounded-2xl grayscale group-hover:grayscale-0 transition-all duration-500"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                            ></iframe>
                         </div>
 
                         {/* WhatsApp + Contact Details */}
